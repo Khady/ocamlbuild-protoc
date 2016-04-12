@@ -1,0 +1,19 @@
+opam-version: "1.2"
+maintainer: "Louis Roché <louis@louisroche.net>"
+authors: ["Louis Roché <louis@louisroche.net>"]
+dev-repo: "git+https://github.com/Khady/ocamlbuild-protoc.git"
+bug-reports: "https://github.com/Khady/ocamlbuild-protoc/issues"
+version: "dev"
+license: "MIT"
+build: [
+  [make "all"]
+]
+install: [make "install"]
+remove: [
+  ["ocamlfind" "remove" "ocamlbuild_protoc"]
+]
+depends: [
+  "ocamlfind" {build}
+  "ocaml-protoc"
+]
+available: [ocaml-version >= "4.01.0"]
