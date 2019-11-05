@@ -14,6 +14,7 @@ remove: [
 ]
 depends: [
   "ocamlfind" {build}
+  "ocamlbuild" {build}
   "ocaml-protoc"
 ]
 available: [ocaml-version >= "4.01.0"]
